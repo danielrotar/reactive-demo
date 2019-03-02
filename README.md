@@ -8,11 +8,13 @@ Slides: https://docs.google.com/presentation/d/1qLPO9RuxJFj0zX8euOlNl-PG-0ULK2JJ
 ## Nonreactive client
 
 `docker-compose run client-nonreactive`
+
 `help` for available commands
 
 ## Reactive client
 
 `docker-compose run client-reactive`
+
 `help` for available commands
 
 ## Nonreactive server
@@ -22,4 +24,5 @@ Slides: https://docs.google.com/presentation/d/1qLPO9RuxJFj0zX8euOlNl-PG-0ULK2JJ
 ## Reactive server
 
 `docker-compose up server-reactive`
+
 Websocket html page available at `localhost:8080/index.html`
