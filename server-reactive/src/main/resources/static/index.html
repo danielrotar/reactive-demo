@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Uppercase</title>
+        <script>
+
+            var socket =
+                new WebSocket("ws://localhost:8080/uppercase/ws");
+
+            socket.addEventListener('message', function (event) {
+                document.getElementById('out').value = event.data;
+            });
+
+            function convert(){
+                socket.send(document.getElementById('inp').value);
+            }
+
+        </script>
+    </head>
+    <body>
+        <input id="inp"/>
+        <button onclick="convert()">Convert</button>
+        <input id="out"/>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  client-nonreactive:
+    stdin_open: true
+    tty: true
+    build:
+      context: ./client-nonreactive/
+      dockerfile: ../Dockerfile
+    networks:
+      - app-network
+    volumes:
+      - ./data:/data
+  client-reactive:
+    stdin_open: true
+    tty: true
+    build:
+      context: ./client-reactive/
+      dockerfile: ../Dockerfile
+    networks:
+      - app-network
+    volumes:
+      - ./data:/data
+  server-nonreactive:
+    build:
+      context: ./server-nonreactive/
+      dockerfile: ../Dockerfile
+    networks:
+      - app-network
+  server-reactive:
+    build:
+      context: ./server-reactive/
+      dockerfile: ../Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - app-network
+
+networks:
+  app-network:
