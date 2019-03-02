@@ -3,6 +3,10 @@
 
 Slides: https://docs.google.com/presentation/d/1qLPO9RuxJFj0zX8euOlNl-PG-0ULK2JJOVgYgTFj_fk/edit?usp=sharing
 
+# Prerequisites
+
+Docker: https://www.docker.com/get-started
+
 # Run commands
 
 ## Nonreactive client
